@@ -1,0 +1,349 @@
+/*
+    Theme Name: Illumina Theme
+    Theme URI:
+    Description: Tema para la web
+    Author: INVITRO AGENCIA DIGITAL
+    Version: 1.0
+    License: GNU General Public License v2 or Later
+    Tags: Wordpress
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --bk-iv: #262626;
+    --bk-dark-iv: #121212;
+    --wh-iv: #ffffff;
+    --gr-iv: #30CEB3;
+    --pr-iv: #3333CC;
+}
+
+
+input {
+    outline: 0px !important;
+
+    &:hover {
+        outline: 0px !important;
+    }
+}
+
+img {
+    border-radius: 0.4rem !important;
+}
+
+#adminmenu,
+#adminmenu .wp-submenu,
+#adminmenuback,
+#adminmenuwrap {
+    background-color: var(--bk-iv) !important;
+}
+
+
+#adminmenu .wp-submenu a:focus,
+#adminmenu .wp-submenu a:hover,
+#adminmenu a:hover,
+#adminmenu li.menu-top>a:focus {
+    color: var(--wh-iv) !important;
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+#adminmenu .wp-menu-arrow,
+#adminmenu .wp-menu-arrow div,
+#adminmenu li.current a.menu-top,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+    background: var(--pr-iv) !important;
+}
+
+#wpadminbar #wp-admin-bar-wp-logo>.ab-item .ab-icon:before {
+    content: "";
+    background-image: url(data:image/webp;base64,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);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    display: flex;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#wpadminbar {
+    background: var(--bk-iv) !important;
+}
+
+#wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover>a,
+#wpadminbar .quicklinks .menupop ul li a:focus,
+#wpadminbar .quicklinks .menupop ul li a:focus strong,
+#wpadminbar .quicklinks .menupop ul li a:hover,
+#wpadminbar .quicklinks .menupop ul li a:hover strong,
+#wpadminbar .quicklinks .menupop.hover ul li a:focus,
+#wpadminbar .quicklinks .menupop.hover ul li a:hover,
+#wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:focus,
+#wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:hover,
+#wpadminbar li #adminbarsearch.adminbar-focused:before,
+#wpadminbar li .ab-item:focus .ab-icon:before,
+#wpadminbar li .ab-item:focus:before,
+#wpadminbar li a:focus .ab-icon:before,
+#wpadminbar li.hover .ab-icon:before,
+#wpadminbar li.hover .ab-item:before,
+#wpadminbar li:hover #adminbarsearch:before,
+#wpadminbar li:hover .ab-icon:before,
+#wpadminbar li:hover .ab-item:before,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover {
+    color: var(--wh-iv) !important;
+}
+
+#wpadminbar .ab-top-menu>li.hover>.ab-item,
+#wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus,
+#wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item,
+#wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
+    background: var(--bk-dark-iv) !important;
+    color: var(--wh-iv) !important;
+}
+
+#wpadminbar:not(.mobile)>#wp-toolbar a:focus span.ab-label,
+#wpadminbar:not(.mobile)>#wp-toolbar li:hover span.ab-label,
+#wpadminbar>#wp-toolbar li.hover span.ab-label {
+    color: var(--wh-iv) !important;
+}
+
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub>a.menu-top,
+#adminmenu li>a.menu-top:focus {
+    /* background-color: var(--bk-dark-iv) !important; */
+    color: var(--wh-iv) !important;
+}
+
+#adminmenu li a:focus div.wp-menu-image:before,
+#adminmenu li.opensub div.wp-menu-image:before,
+#adminmenu li:hover div.wp-menu-image:before {
+    color: var(--wh-iv) !important;
+}
+
+#wpadminbar .menupop .ab-sub-wrapper,
+#wpadminbar .shortlink-input {
+    background: var(--bk-dark-iv) !important;
+    transition: all .3s ease;
+}
+
+#adminmenu li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after,
+#adminmenu li.wp-has-submenu.wp-not-current-submenu:focus-within:after {
+    border-right-color: var(--bk-iv) !important;
+}
+
+#wpadminbar .quicklinks .menupop ul.ab-sub-secondary,
+#wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu {
+    background: var(--bk-iv) !important;
+}
+
+#wp-admin-bar-user-info .avatar {
+    border-radius: 0.8rem !important;
+}
+
+#wpadminbar #wp-admin-bar-my-account.with-avatar>.ab-empty-item img,
+#wpadminbar #wp-admin-bar-my-account.with-avatar>a img {
+    width: auto;
+    height: 20px !important;
+    border: 0px !important;
+    border-radius: 0.5rem !important;
+    outline: 0px !important;
+
+    @media screen and (max-width: 768px) {
+        height: 26px !important;
+    }
+}
+
+#collapse-button:hover {
+    color: var(--gr-iv) !important;
+}
+
+.wrap .add-new-h2,
+.wrap .add-new-h2:active,
+.wrap .page-title-action,
+.wrap .page-title-action:active {
+    border: 1px solid var(--pr-iv) !important;
+    color: var(--pr-iv) !important;
+}
+
+.wp-list-table a {
+    color: var(--pr-iv) !important;
+    transition: all .3s ease;
+}
+
+.wp-core-ui .button-link {
+    color: var(--pr-iv) !important;
+    opacity: 0.7 !important;
+    transition: all .3s ease;
+}
+
+.wp-core-ui .button-link:active,
+.wp-core-ui .button-link:hover {
+    opacity: 1 !important;
+    color: var(--pr-iv) !important;
+}
+
+.wp-core-ui .button,
+.wp-core-ui .button-secondary {
+    color: var(--bk-dark-iv);
+    border-color: var(--bk-dark-iv);
+    background: transparent !important;
+    transition: all .3s ease;
+
+    &:hover {
+        color: var(--wh-iv) !important;
+        border-color: var(--bk-dark-iv) !important;
+        background: var(--bk-dark-iv) !important;
+    }
+}
+
+.wp-core-ui select:hover {
+    color: var(--pr-iv) !important;
+    border: 1px solid var(--pr-iv) !important;
+    outline: 0px !important;
+    box-shadow: 0 !important;
+}
+
+.wp-core-ui select:focus,
+.wp-core-ui select:active {
+    color: var(--pr-iv) !important;
+    border: 1px solid var(--pr-iv) !important;
+    outline: 0px !important;
+    box-shadow: 0 !important;
+}
+
+a {
+    color: var(--pr-iv);
+    transition: all .3s ease;
+
+    &:hover {
+        color: var(--pr-iv) !important;
+        filter: contrast(0.8) !important;
+    }
+}
+
+
+.health-check-accordion-trigger .badge,
+.privacy-settings-accordion-trigger .badge {
+    color: var(--bk-dark-iv) !important;
+}
+
+.health-check-accordion-trigger .badge.blue,
+.privacy-settings-accordion-trigger .badge.blue {
+    border: 1px solid var(--bk-dark-iv) !important;
+}
+
+.green .site-health-progress #bar {
+    stroke: var(--gr-iv) !important;
+}
+
+.health-check-tab.active,
+.privacy-settings-tab.active {
+    box-shadow: inset 0 -3px var(--gr-iv);
+}
+
+.health-check-accordion-trigger:focus,
+.privacy-settings-accordion-trigger:focus {
+    outline: 2px solid var(--bk-iv) !important;
+}
+
+.column-comments a.post-com-count-approved:focus .comment-count-approved,
+.column-comments a.post-com-count-approved:hover .comment-count-approved,
+.column-response a.post-com-count-approved:focus .comment-count-approved,
+.column-response a.post-com-count-approved:hover .comment-count-approved {
+    background: var(--pr-iv) !important;
+}
+
+.column-comments a.post-com-count-approved:focus:after,
+.column-comments a.post-com-count-approved:hover:after,
+.column-response a.post-com-count-approved:focus:after,
+.column-response a.post-com-count-approved:hover:after {
+    border-top-color: var(--pr-iv) !important;
+}
+
+input[type=checkbox]:focus,
+input[type=color]:focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=datetime]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=radio]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--pr-iv) !important;
+    box-shadow: 0 0 0 1px var(--pr-iv) !important;
+    outline: 2px solid transparent;
+}
+
+#screen-meta-links .show-settings:focus {
+    border-color: var(--bk-iv) !important;
+    box-shadow: 0 0 0 1px var(--bk-iv) !important;
+    outline: 2px solid transparent;
+}
+
+.column-author img,
+.column-comment .comment-author img,
+.column-username img {
+    border-radius: 0.4rem !important;
+    overflow: hidden !important;
+}
+
+input[type=radio]:checked::before {
+    background-color: var(--pr-iv) !important;
+}
+
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub>a.menu-top,
+#adminmenu li>a.menu-top:focus {
+    background-color: var(--bk-dark-iv) !important;
+}
+
+.wp-person a:focus .gravatar,
+a:focus,
+a:focus .media-icon img,
+a:focus .plugin-icon {
+    color: #3333CC !important;
+    box-shadow: unset !important;
+    outline: 0px solid transparent;
+}
+
+a.current:before {
+    color: var(--pr-iv) !important;
+}
+
+.postbox {
+    border: 1px solid var(--bk-iv) !important;
+    border-radius: 3px !important;
+}
+
+.postbox-header {
+    border-bottom: 1px solid var(--bk-dark-iv) !important;
+}
+
+table.fixed {
+    border-radius: 3px !important
+}
+
+#adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus {
+    position: relative;
+    background-color: var(--bk-dark-iv) !important;
+}
+
+.postbox .handle-order-higher:focus, .postbox .handle-order-lower:focus, .postbox .handlediv:focus {
+    box-shadow: unset !important;
+    border-radius: 50%;
+    outline: 0px solid transparent;
+}

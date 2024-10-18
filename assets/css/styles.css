@@ -1,0 +1,37 @@
+@import url(hard-normalize.css);
+@import url(fonts.css);
+@import url(media-querys.css);
+
+:root {
+    /* FUENTES DE TEXTO */
+    
+
+    /* PALETA DE COLORES */
+    
+
+    /* CONFIGURACIÓN DE TRANSICIÓN */
+    --anim-low: all .3s ease;
+}
+
+/* PREDETERMINADOS */
+
+
+/* Ancho y Margen*/
+.margin {
+    width: min(88%, 1500px);
+    margin-inline: auto;
+}
+
+/* ESTILOS */
+
+header {
+
+}
+
+main {
+    
+}
+
+footer {
+
+}

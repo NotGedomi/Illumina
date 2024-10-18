@@ -1,0 +1,12 @@
+/* 
+
+    FUENTES DE TEXTO [ Reemplaza aquí por las tuyas ] 
+    Ejemplo de definición de fuentes:
+
+        @font-face {
+            font-family: "grtskTeraBold"; <-- Recuerda siempre crear el nombre de la fuente 
+            src: url("../fonts/grtskTeraBold.otf"); <-- Cambia por el nombre del archivo de tu fuente de texto [ Recuerda pegar tus fuentes en la carpeta 'fonts'] 
+            font-display: swap; <-- Dejar esto por defecto 
+        }
+
+*/
