@@ -11,11 +11,13 @@ if (!defined('ABSPATH')) {
 }
 
 function get_product_average_rating($product_id) {
-    $rating_counts = get_product_rating_counts($product_id);
-    $total_rating = array_sum(array_map(function($count, $star) { 
-        return $count * $star; 
-    }, $rating_counts, array_keys($rating_counts)));
+    $product = wc_get_product($product_id);
     
-    $total_count = array_sum($rating_counts);
-    return $total_count > 0 ? round($total_rating / $total_count, 1) : 0;
+    if (!$product) {
+        return '0.0';
+    }
+
+    // Obtener el rating y formatearlo a un decimal
+    $rating = $product->get_average_rating();
+    return number_format((float)$rating, 1, '.', '');
 }

@@ -24,9 +24,9 @@ function get_course_instructor_info($course_id) {
     // Obtener ID de la imagen de perfil
     $profile_image_id = get_user_meta($instructor->ID, 'instructor_profile_image_id', true);
     $profile_image_url = '';
-    
+
     if ($profile_image_id) {
-        $image_url = wp_get_attachment_image_url($profile_image_id, 'thumbnail');
+        $image_url = wp_get_attachment_image_url($profile_image_id, 'full');
         if ($image_url) {
             $profile_image_url = $image_url;
         }
@@ -34,7 +34,7 @@ function get_course_instructor_info($course_id) {
 
     // Si no hay imagen personalizada, intentar obtener el avatar
     if (empty($profile_image_url)) {
-        $profile_image_url = get_avatar_url($instructor->ID, array('size' => 150));
+        $profile_image_url = get_avatar_url($instructor->ID, array('size' => 600));
     }
 
     return array(

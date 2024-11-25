@@ -1,5 +1,13 @@
 <?php
 /**
+ * Maneja el avatar personalizado del usuario
+ */
+
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+}
+
+/**
  * Oculta el campo de imagen de perfil estándar de WordPress
  */
 function remove_default_user_profile_fields($user) {
@@ -35,7 +43,7 @@ function custom_user_profile_image($avatar, $id_or_email, $size, $default, $alt)
     if ($user && is_object($user)) {
         $image_id = get_user_meta($user->ID, 'instructor_profile_image_id', true);
         if ($image_id) {
-            $image_url = wp_get_attachment_image_src($image_id, 'thumbnail');
+            $image_url = wp_get_attachment_image_src($image_id, 'full');
             if ($image_url) {
                 $avatar = "<img alt='{$alt}' src='{$image_url[0]}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
             }

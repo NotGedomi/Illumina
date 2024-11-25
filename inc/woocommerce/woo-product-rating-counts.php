@@ -11,25 +11,12 @@ if (!defined('ABSPATH')) {
 }
 
 function get_product_rating_counts($product_id) {
-    $counts = array(
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0
-    );
-
-    $reviews = get_approved_comments(array(
-        'post_id' => $product_id,
-        'type' => 'review'
-    ));
-
-    foreach ($reviews as $review) {
-        $rating = intval(get_comment_meta($review->comment_ID, 'rating', true));
-        if ($rating >= 1 && $rating <= 5) {
-            $counts[$rating]++;
-        }
+    $product = wc_get_product($product_id);
+    
+    if (!$product) {
+        return array_fill(1, 5, 0);
     }
 
-    return $counts;
+    // Usar la función nativa de WooCommerce para obtener las calificaciones
+    return $product->get_rating_counts();
 }
