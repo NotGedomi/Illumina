@@ -1,6 +1,4 @@
 <style>
-    aside {
-    }
 </style>
 
 <aside>
